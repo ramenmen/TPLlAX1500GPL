@@ -1,13 +1,13 @@
 name: Build GPL
 
 on:
+  workflow_dispatch:
   push:
     # branches:
       # - main
     paths-ignore:
       - 'README.md'
 
-    workflow_dispatch:
 
 
 jobs:

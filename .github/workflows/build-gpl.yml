@@ -17,12 +17,12 @@ jobs:
     strategy:
       matrix:
         include:
-          - gplv: ax1500v1
-            link: "https://static.tp-link.com/upload/gpl-code/2023/202303/20230319/ax1500v1_gpl_20230314.tar.gz"
+          - gplv: ax73v2
+            link: "https://static.tp-link.com/resources/gpl/gpl_ax73v2.tar.gz"
             l2tp_retry: "true"
-          - gplv: ax1500v1.2
-            link: "https://static.tp-link.com/upload/gpl-code/2023/202304/20230406/ax1500v1.20_gpl_20230404.tar.gz"
-            l2tp_retry: "true"
+          #- gplv: ax1500v1.2
+          #  link: "https://static.tp-link.com/upload/gpl-code/2023/202304/20230406/ax1500v1.20_gpl_20230404.tar.gz"
+          #  l2tp_retry: "true"
           # - gplv: ax10v1
           #   link: "https://static.tp-link.com/resources/gpl/ax10v1_gpl_20200701.tar.gz"
           #   l2tp_retry: "false"

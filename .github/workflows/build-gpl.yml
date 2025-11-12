@@ -47,7 +47,6 @@ jobs:
 
       - name: Patch gpl code
         run: |
-          docker run --rm -v ./router:/router -w /router --user 1001 router_build bash -c "patch -p1 < ../router.patch"
           docker run --rm -v ./router:/router -w /router --user 1001 router_build bash -c "mkdir -p Iplatform/openwrt/dl/ && cp /luci-0.11.1.tar.gz /router/Iplatform/openwrt/dl"
           docker run --rm -v ./router:/router -w /router --user 1001 router_build bash -c "mkdir -p Iplatform/openwrt/dl/ && cp /mtd-utils-1.4.5.tar.gz /router/Iplatform/openwrt/dl"
 

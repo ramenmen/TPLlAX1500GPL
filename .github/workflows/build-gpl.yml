@@ -55,7 +55,7 @@ jobs:
           set -o pipefail
           if ${{ matrix.l2tp_retry }}; then
             echo "L2TP retry is ON"
-            docker run --rm -v ./router:/router -w /router/Iplatform/build --user 1001 router_build bash -c "((make SHELL=/bin/bash V=s) || ((echo CONFIG_L2TP_IP=y >> ../../bcm675x/bcm963xx_router/kernel/linux-4.1/.config) && (echo CONFIG_L2TP_ETH=y >> ../../bcm675x/bcm963xx_router/kernel/linux-4.1/.config) && make SHELL=/bin/bash V=s))" | tee build.log
+            docker run --rm -v ./router:/router -w /router/Iplatform/build --user 1001 router_build bash -c "((make SHELL=/bin/bash V=s) || ((echo CONFIG_L2TP_IP=y >> ../../bcm504L02/bcm963xx_5.04L.02p1/kernel/linux-4.19/.config) && (echo CONFIG_L2TP_ETH=y >> ../../bcm504L02/bcm963xx_5.04L.02p1/kernel/linux-4.19/.config) && make SHELL=/bin/bash V=s))" | tee build.log
           else
             echo "No L2TP retry"
             docker run --rm -v ./router:/router -w /router/Iplatform/build --user 1001 router_build bash -c "make SHELL=/bin/bash V=s" | tee build.log
